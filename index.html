@@ -243,6 +243,18 @@ img{max-width:100%;display:block;}
 .biz-card .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line);}
 .biz-card .btn-ghost:hover{border-color:var(--ink-soft);background:var(--card);}
 
+/* ---------- Brands We Carry ---------- */
+.brands-section{background:var(--paper-2);border-bottom:1px solid var(--line);}
+.brands-section .wrap{padding-block:40px;text-align:center;}
+.brands-section .eyebrow{margin-bottom:8px;}
+.brands-section h2{font-size:1.4rem;margin:0 0 24px;}
+.brands-grid{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:center;}
+.brand-logo{height:64px;width:auto;max-width:100%;border-radius:10px;object-fit:contain;box-shadow:var(--shadow);}
+.brands-more{margin:22px 0 0;font-size:.86rem;color:var(--ink-soft);font-style:italic;}
+@media (max-width:640px){
+  .brand-logo{height:48px;}
+}
+
 /* ---------- Category sections ---------- */
 .cat{padding-block:22px;border-bottom:1px solid var(--line);scroll-margin-top:120px;}
 .cat:nth-child(even){background:var(--paper-2);}
@@ -690,15 +702,14 @@ footer .bottom{max-width:1240px;margin:26px auto 0;padding:16px 20px 0;border-to
 <div class="brands-section" id="brands">
   <div class="wrap">
     <p class="eyebrow">Brands We Carry</p>
+    <h2>Trusted National Brands, In Stock</h2>
     <div class="brands-grid">
-      <span class="brand-name">Dart</span>
-      <span class="brand-name">Solo</span>
-      <span class="brand-name">Empress</span>
-      <span class="brand-name">EcoPax</span>
-      <span class="brand-name">Crystal</span>
-      <span class="brand-name">HFA</span>
-      <span class="brand-name">Sunset</span>
+      <img class="brand-logo" src="brand-logos/dart-solo.jpg" alt="Dart / Solo" loading="lazy">
+      <img class="brand-logo" src="brand-logos/empress.jpg" alt="Empress" loading="lazy">
+      <img class="brand-logo" src="brand-logos/ecopax.jpg" alt="EcoPax" loading="lazy">
+      <img class="brand-logo" src="brand-logos/crystal.jpg" alt="Crystal by Crystalware" loading="lazy">
     </div>
+    <p class="brands-more">…and much, much more.</p>
   </div>
 </div>
 
