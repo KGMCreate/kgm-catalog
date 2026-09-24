@@ -12,6 +12,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+try{
+  var t = localStorage.getItem('kgm-theme');
+  if(t === 'dark' || t === 'light'){ document.documentElement.setAttribute('data-theme', t); }
+}catch(e){}
+</script>
 <style>
 :root{
   --ink:#211c16;
@@ -28,8 +34,8 @@
   --shadow: 0 10px 30px -12px rgba(60,40,10,.25);
   --focus: #1e6fd9;
 }
-@media (prefers-color-scheme: dark){
-  :root{
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
     --ink:#f1ece2;
     --ink-soft:#b9b0a0;
     --paper:#151210;
@@ -43,6 +49,20 @@
     --line-soft:#2a2620;
     --shadow: 0 10px 30px -12px rgba(0,0,0,.5);
   }
+}
+:root[data-theme="dark"]{
+  --ink:#f1ece2;
+  --ink-soft:#b9b0a0;
+  --paper:#151210;
+  --paper-2:#1d1a15;
+  --card:#211d18;
+  --red:#e2515f;
+  --red-deep:#ff8891;
+  --gold:#d8ac4c;
+  --steel:#9aa3ac;
+  --line:#34301f;
+  --line-soft:#2a2620;
+  --shadow: 0 10px 30px -12px rgba(0,0,0,.5);
 }
 *{box-sizing:border-box;}
 body{
